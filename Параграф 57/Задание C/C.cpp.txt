@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int A, B, C, max = 0;
+    cin >> A >> B >> C;
+    if (A == B && B == C){
+        cout << '0';
+        return 0;
+    }
+    if (A >= max) {
+        max = A;
+    }
+    if (B >= max) {
+        max = B;
+    }
+    if (C >= max) {
+        max = C;
+    }
+    if (max == A) {
+        cout << "A ";
+    }
+    if (max == B) {
+        cout << "B ";
+    }
+    if (max == C) {
+        cout << "C ";
+    }
+    return 0;
+}
