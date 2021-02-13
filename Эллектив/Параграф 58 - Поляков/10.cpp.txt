@@ -1,0 +1,41 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+
+{
+
+    int N;
+
+    cin >> N;
+
+    for (int i = 1; i <= N; i++) {
+
+        int x = i;
+
+        bool iscorrect = true;
+
+        while (x != 0) {
+
+            if (x % 10 != 0 && i % (x % 10) != 0) {
+
+                iscorrect = false;
+
+            }
+
+            x /= 10;
+   
+     }
+
+        if (iscorrect) {
+
+            cout << i << ' ';
+
+        }
+
+    }
+
+    return 0;
+
+}
