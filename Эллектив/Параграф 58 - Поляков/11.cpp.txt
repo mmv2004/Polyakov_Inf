@@ -1,0 +1,40 @@
+#include <iostream>
+
+#include <cmath>
+
+using namespace std;
+
+int main()
+
+{
+    int N;
+
+    for (int i = 100; i <= 9999; i++) {
+
+        int x = i, power = 3, sum = 0;
+
+        if (i > 999) {
+
+            power = 4;
+
+        }
+
+        while (x != 0) {
+
+            sum += pow(x % 10, power);
+
+            x /= 10;
+
+        }
+
+        if (sum == i) {
+
+            cout << i << ' ';
+
+        }
+
+    }
+
+    return 0;
+
+}
