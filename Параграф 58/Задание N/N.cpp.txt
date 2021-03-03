@@ -1,0 +1,44 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+
+    int N;
+
+    cin >> N;
+
+    bool f = true;
+
+    int last = N % 10;
+
+    while (N > 0) {
+
+        int last1 = N % 10;
+
+        if ( last != last1) {
+
+            f = false;
+
+        }
+
+        N /= 10;
+
+    }
+
+    if (f == true) {
+
+        cout << "YES";
+
+    }
+
+    if (f == false) {
+
+        cout << "NO";
+
+    }
+
+    return 0;
+
+}
